@@ -6,6 +6,7 @@ Prédit si un rookie NBA durera **plus de 5 ans** en ligue à partir de ses stat
 
 ## Table des matières
 
+- [🎬 Démo](#-démo)
 - [Aperçu du projet](#aperçu-du-projet)
 - [Structure du projet](#structure-du-projet)
 - [Installation](#installation)
@@ -16,6 +17,12 @@ Prédit si un rookie NBA durera **plus de 5 ans** en ligue à partir de ses stat
 - [Pipeline de modélisation](#pipeline-de-modélisation)
 - [Résultats](#résultats)
 - [Fichiers de modèle](#fichiers-de-modèle)
+
+---
+
+## 🎬 Démo
+
+https://github.com/user-attachments/assets/68c63445-2376-473c-b8a6-3e9de0fb9330
 
 ---
 
@@ -38,7 +45,6 @@ Le projet couvre l'intégralité du cycle de vie ML :
 ```
 ├── main.py                  # API FastAPI (prétraitement + prédiction)
 ├── version_final.ipynb      # Notebook complet d'entraînement
-├── nba_logreg.csv           # Dataset source (1340 joueurs, 21 colonnes)
 ├── model_pipeline.joblib    # Pipeline sklearn (MinMaxScaler + RandomForest)
 ├── seuil_optimal.joblib     # Seuil de décision (défaut : 0.50)
 ├── winsor_bounds.joblib     # Bornes de winsorisation (calculées sur X_train)
