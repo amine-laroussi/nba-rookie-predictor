@@ -1,0 +1,19 @@
+services:
+  nba-api:
+    build: .
+    container_name: nba-rookie-predictor
+    ports:
+      - "8000:8000"
+    volumes:
+      # Permet de remplacer les modèles sans rebuilder l'image
+      - ./model_pipeline.joblib:/app/model_pipeline.joblib
+      - ./seuil_optimal.joblib:/app/seuil_optimal.joblib
+      - ./winsor_bounds.joblib:/app/winsor_bounds.joblib
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
