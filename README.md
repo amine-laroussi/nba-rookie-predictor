@@ -6,7 +6,7 @@ Prédit si un rookie NBA durera **plus de 5 ans** en ligue à partir de ses stat
 
 ## Table des matières
 
-- [🎬 Démo](#-démo)
+- [Démo](#-démo)
 - [Aperçu du projet](#aperçu-du-projet)
 - [Structure du projet](#structure-du-projet)
 - [Installation](#installation)
